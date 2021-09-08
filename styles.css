@@ -54,6 +54,10 @@ h1{
 h2{
   font-size: 2rem;
 }
+h3{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 p{
   font-size: 1rem;
 }
@@ -65,14 +69,6 @@ button{
   padding: 1em 2em;
   font-size: 1.5em;
   transition: all;
-}
-
-button:hover{
-  border-color: #f1ff5c;
-  color: white;
-  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
-  transform: translateY(-5px);
-  cursor: pointer;
 }
 
 /* Navbar */
@@ -122,6 +118,14 @@ button:hover{
   padding-bottom: 1.5rem;
 }
 
+#Home button:hover{
+  border-color: #f1ff5c;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
 /* ABOUT US */
 
 #AboutUs{
@@ -165,7 +169,7 @@ button:hover{
 
 #Screening{
   text-align: center;
-  height: 45vh;
+  height: 50vh;
   position: relative;
   padding: 5% 20%;
   margin-bottom: 5%;
@@ -198,40 +202,30 @@ button:hover{
   color: black;
 }
 
+
 #Screening button:hover{
-  border-color: #000000;
+  border-color: #000;
   background: transparent;
   box-shadow: 0 0.5em 0.5em -0.4em #000000;
+  cursor: pointer;
 }
 
 /* Gallery */
 
-#Gallery .card{
-  background: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 5px 5px 15px 2.5px black;
-  transition: 0.2s;
+#Gallery{
+  background-color: whitesmoke;
+  padding: 10%;
 }
 
-#Gallery .card:not(:first-child){
-  margin-left: -4rem;
+#Gallery h2{
+  position: relative;
+  top: 50%;
 }
-
-#Gallery .card:hover{
-  transform: translateY(-1rem);
-}
-
-#Gallery .card:hover ~ .card {
-  transform: translateX(4.5rem);
-}
-
-
 
 /* HONOURS */
 
 .container{
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 h2{
   text-align: center;
@@ -288,16 +282,30 @@ h2{
   padding-top: 10rem;
 }
 
+/* Member */
+#Member{
+  align-self: center;
+}
+
 
 /* footer */
-#footer{
+#Contact{
   text-align: center;
   padding: 7% 15%;
   background-color: white;
 }
 
+#Contact button:hover{
+  color: #FFBD69;
+  border-color: #FFBD69;
+  box-shadow: 0 0.5em 0.5em -0.4em #FFBD69;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
 .s-icon{
-  margin: 20px 30px;
+  margin: 2rem 30px 20px;
+  color: #000000;
 }
 
 .s-icon:hover{
@@ -308,13 +316,28 @@ h2{
 /* Mobile responsive */
 @media screen and (max-width: 450px){
 
+  .navbar-brand{
+    font-size: 1.7rem;
+  }
+
+  .navbar-brand img {
+    height: 1.6rem;
+    float: left;
+    padding: 0 0.5rem;
+  }
+
   #Fixtures{
     padding: 0;
   }
 
   #Screening{
-    padding: 2% 4%;
-    height: 40vh;
+    padding: 0 4%;
+    height: 50vh;
+    margin-top: 0;
+  }
+
+  #Screening h2{
+    font-size: 1.5rem;
   }
 
   #Screening table{
@@ -333,6 +356,10 @@ h2{
     width: 50%;
   }
 
+  #Gallery h2{
+    top: 0;
+  }
+
   .slick-slide img{
     display: block;
     width: auto;
@@ -348,7 +375,7 @@ h2{
     min-height: 0.5rem;
   }
   
-  #footer{
+  #Contact{
     padding: 5% 5%;
   }
 }
