@@ -21,10 +21,3 @@ $(document).ready(function () {
     });
 });
 
-
-
-// let member = document.querySelector(".register");
-
-// member.addEventListener("click", () => {
-//     confirm("Are you under 18 yrs. OLD");
-// })
